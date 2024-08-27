@@ -59,7 +59,7 @@ String jsonLiteralAsDart(Object? value) {
     }
   }
 
-  if (value is bool || value is num) return value.toString();
+  if (value is bool || value is num || value is BigInt) return value.toString();
 
   if (value is List) {
     final listItems = value.map(jsonLiteralAsDart).join(', ');
