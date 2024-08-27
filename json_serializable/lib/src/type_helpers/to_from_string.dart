@@ -74,7 +74,7 @@ class ToFromStringHelper {
       return null;
     }
 
-    final parseParam = isString ? expression : '$expression as String';
+    final parseParam = isString ? '$expression as String' : expression;
 
     final output = '$_parse($parseParam)';
 
